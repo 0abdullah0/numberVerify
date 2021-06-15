@@ -1,0 +1,20 @@
+<body>
+  <div id="wrapper">
+   <h1>History Table of Numbers</h1>   
+   <table id="keywords" cellspacing="0" cellpadding="0">
+     <thead>
+       <tr>
+         <th><span style="font-size: 20px;">Numbers</span></th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor= "let number of numbers">
+         <td class="lalign">{{number}}</td>
+       </tr>
+     </tbody>
+   </table>
+  </div>
+  <div class="inputbox">
+    <input type="button" [routerLink]= "['/phone']"class="simple" value="Phone Page">
+  </div>
+ </body>

@@ -1,0 +1,26 @@
+<body>
+  <div class="center">
+    <h1>Number Verify</h1>
+    <form (submit)= "getData($event)">
+      <div class="inputbox">
+        <input type="number" class="form-control" [(ngModel)]= "phone" name ="phone"  placeholder="Add Number ..."/>
+        <span>Phone </span>
+      </div>
+      
+  <div *ngIf= "showData">
+    <span><u>Data of this number</u></span><br>
+    <span style="font-size: 16px;">Local format:  </span><label >{{response.local_format}}</label><br>
+    <span style="font-size: 16px;">International_format:  </span><label>{{response.international_format}}</label><br>
+    <span style="font-size: 16px;" >Country prefix:  </span><label>{{response.country_prefix}}</label><br>
+    <span style="font-size: 16px;">Country code:  </span><label>{{response.country_code}}</label><br>
+    <span style="font-size: 16px;">Country_name: </span><label>{{response.country_name}}</label><br>
+    <span style="font-size: 16px;">Location: </span><label>{{response.location}}</label><br>
+  
+  </div>
+      <div class="inputbox">
+        <input type="button" [routerLink]= "['/history']" value="History Page">
+      </div>
+    </form>
+  </div>
+
+</body>
